@@ -37,15 +37,18 @@ Unicorn Tears
 order = {}
 user_input = input("""***********************************
 ** What would you like to order? **
+**To quit at any time, type "quit"**
 *********************************** \n< """) 
 order[user_input] = 1
 if user_input != 'quit':
     print('** 1  order of {} have been added to your meal **'.format( user_input))
 else :
+    print('your order is '+ str(order))
     exit
 while True:
-    user_input= input ('<')
+    user_input= input (""" **To quit at any time, type "quit" ** \n <""")
     if user_input== 'quit':
+        print('your order is '+ str(order))
         break 
     else:
             if user_input in order:
@@ -53,7 +56,7 @@ while True:
             else:
                 order[user_input] = 1
             print('** {} order of {} have been added to your meal **'.format(  order[user_input],user_input))
-            # print(order)
+            # print('your order is '+ str(order))
 
 # if user_input != 'quit':
 #     # def user_input ():
